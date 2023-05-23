@@ -62,12 +62,13 @@ function onBtnClick() {
       refs.seconds.textContent = '00';
       dataInputEl.removeAttribute('disabled');
       btnStartEl.removeAttribute('disabled');
+    } else {
+      refs.days.textContent = addLeadingZero(days);
+      refs.hours.textContent = addLeadingZero(hours);
+      refs.minutes.textContent = addLeadingZero(minutes);
+      refs.seconds.textContent = addLeadingZero(seconds);
     }
-    refs.days.textContent = addLeadingZero(days);
-    refs.hours.textContent = addLeadingZero(hours);
-    refs.minutes.textContent = addLeadingZero(minutes);
-    refs.seconds.textContent = addLeadingZero(seconds);
-  }, 4);
+  }, 1000);
   dataInputEl.setAttribute('disabled', '');
   btnStartEl.setAttribute('disabled', '');
 }
